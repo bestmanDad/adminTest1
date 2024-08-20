@@ -11,12 +11,7 @@
     const handleCollaps = () => {
         store.state.isCollapse = !store.state.isCollapse;
     };
-    const handleLoginOut = () => {
-        store.clean();
-        router.push("/login");
-        store.state.isLogin = false;
-    };
-    const current = store.state.currentMenu;
+    const current = computed(() => store.state.currentMenu);
 </script>
 <template>
     <div class="header">

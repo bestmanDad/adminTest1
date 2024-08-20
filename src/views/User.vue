@@ -2,9 +2,7 @@
     import { ref, getCurrentInstance, onMounted, reactive, nextTick } from "vue";
     import { ElMessage, ElMessageBox } from "element-plus";
     const { proxy } = getCurrentInstance();
-    const handleClick = () => {
-        console.log("click");
-    };
+
     const config = reactive({ name: "", tatal: 0, page: 1, limit: 10 });
     const tableData = ref([]);
     const getUserData = async () => {
@@ -15,6 +13,7 @@
         });
         config.tatal = data.count;
     };
+
     const tableLable = reactive([
         { prop: "name", label: "姓名" },
         { prop: "age", label: "年龄" },
@@ -22,6 +21,7 @@
         { prop: "birth", label: "生日" },
         { prop: "addr", label: "地址", width: 500 },
     ]);
+
     const formInline = reactive({ keyWord: "" });
 
     const handleSearch = () => {
@@ -55,6 +55,7 @@
     const action = ref("add");
     const dialogVisible = ref(false);
     const formUser = reactive({});
+
     const rules = reactive({
         name: [{ required: true, message: "姓名是必填项", trigger: "blur" }],
         age: [
