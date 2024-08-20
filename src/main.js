@@ -22,14 +22,13 @@ function isRoute(to) {
     return router.getRoutes().filter((item) => item.path === to.path).length > 0;
 }
 router.beforeEach((to, from) => {
-    if (to.path !== "/login" && !store.state.token) {
-        ElMessage.error("请先登录");
-        return { name: "login" };
-        return;
-    }
+    // if (to.path !== "/login" && !store.state.token) {
+    //     ElMessage.error("请先登录");
+    //     return { name: "login" };
+    //     return;
+    // }
     if (!isRoute(to)) {
         console.log(to);
-
         return { name: "404" };
     }
 });

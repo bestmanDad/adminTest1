@@ -36,8 +36,8 @@
                 <span class="el-dropdown-link"> <img :src="getImage('user')" class="user" /> </span>
                 <template #dropdown>
                     <el-dropdown-menu>
-                        <el-dropdown-item>个人中心</el-dropdown-item>
-                        <el-dropdown-item @click="handleLoginOut">退出</el-dropdown-item>
+                        <!-- <el-dropdown-item>个人中心</el-dropdown-item>
+                        <el-dropdown-item @click="handleLoginOut">退出</el-dropdown-item> -->
                     </el-dropdown-menu>
                 </template>
             </el-dropdown>
